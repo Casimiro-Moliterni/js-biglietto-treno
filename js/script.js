@@ -23,10 +23,10 @@ console.log(priceStandard)
 
 
 if (userAge < 18) {
-   priceStandard = (priceStandard * 20 / 100) - priceStandard;
+   priceStandard =priceStandard - (priceStandard * 20 / 100);
     console.log(priceStandard)
 }else if (userAge > 65){
-    priceStandard = (priceStandard * 40 / 100) - priceStandard  ;
+    priceStandard = priceStandard -(priceStandard * 40 / 100)  ;
     console.log(priceStandard)
 }
 
