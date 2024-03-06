@@ -16,17 +16,24 @@ console.log(userAge)
 
 // prezzo fisso biglietto 
 
-const priceStandard = ( userKm * 0.21 );
+let priceStandard = ( userKm * 0.21 );
 console.log(priceStandard)
 
 // calcola sconto 
 
-let priceDiscount;
 
 if (userAge < 18) {
-    priceDiscount = (priceStandard * 20 / 100)
-    console.log(priceDiscount)
+   priceStandard = (priceStandard * 20 / 100) - priceStandard;
+    console.log(priceStandard)
 }else if (userAge > 65){
-    priceDiscount = (priceStandard * 40 / 100)
-    console.log(priceDiscount)
+    priceStandard = (priceStandard * 40 / 100) - priceStandard  ;
+    console.log(priceStandard)
 }
+
+let priceStandardRounded = priceStandard.toFixed(2);
+
+const UserMessage = 'Il prezzo del tuo biglietto è:' + priceStandardRounded ;
+console.log(UserMessage)
+// output prezzo 
+
+document.getElementById('user-Price').innerHTML = UserMessage;
